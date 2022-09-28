@@ -9,9 +9,19 @@ var peso = tdPeso.textContent;
 var tdAltura = paciente.querySelector(".info-altura");
 var altura = tdAltura.textContent;
 
+var tdImc = paciente.querySelector(".info-imc");
+
+if(peso < 0) {
+    console.log("Peso invalido");
+}
+
+if(peso > 1000) {
+    console.log("Peso invalido")
+}
+
 var imc = peso / (altura * altura); // 100 /2.0 x 2.0 = 100 / 4 =>>>> 25
 
-console.log(paciente); //tr 
-console.log(tdPeso);  // td que tem peso
+tdImc.textContent = imc;
+
 console.log(imc); //referente a variavel imc
 
